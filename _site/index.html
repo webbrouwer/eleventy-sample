@@ -10,13 +10,32 @@
     <style>
         .content{max-width:960px;padding:1em;margin:0 auto;text-align:center}h1{font-size:60px;color:green}p{font-family:fantasy}
     </style>
+
+    <!-- tiny slider -->
+    <link rel="stylesheet" href="tiny-slider.css">
+
     <title>First Eleventy Project</title>
+
   </head>
   <body>
     <div class="content">
         <h1>First Eleventy Project</h1>
 <p>Does this content work?</p>
 
+
+    <div class="my-slider">
+      <div><img src="https://via.placeholder.com/400x300" alt=""></div>
+      <div><img src="https://via.placeholder.com/400x300" alt=""></div>
+      <div><img src="https://via.placeholder.com/400x300" alt=""></div>
     </div>
+
+    </div>
+    <script src="/tiny-slider.js"></script>
+    <script>
+  var slider = tns({
+    container: '.my-slider',
+    items: 1,
+  });
+</script>
   </body>
 </html>

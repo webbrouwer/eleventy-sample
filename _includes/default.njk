@@ -15,11 +15,30 @@ title: First Eleventy Project
     <style>
         {{ css | cssmin | safe }}
     </style>
+
+    <!-- tiny slider -->
+    <link rel="stylesheet" href="{{ "tiny-slider.css" | url }}">
+
     <title>{{ title }}</title>
+
   </head>
   <body>
     <div class="content">
         {{ content | safe }}
+
+    <div class="my-slider">
+      <div><img src="https://via.placeholder.com/400x300" alt=""></div>
+      <div><img src="https://via.placeholder.com/400x300" alt=""></div>
+      <div><img src="https://via.placeholder.com/400x300" alt=""></div>
     </div>
+
+    </div>
+    <script src="{{ "/tiny-slider.js" | url }}"></script>
+    <script>
+  var slider = tns({
+    container: '.my-slider',
+    items: 1,
+  });
+</script>
   </body>
 </html>
