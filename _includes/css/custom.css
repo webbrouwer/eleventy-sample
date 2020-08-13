@@ -1,0 +1,15 @@
+.content {
+    max-width: 960px;
+    padding: 1em;
+    margin: 0 auto;
+    text-align: center;
+}
+
+h1 {
+    font-size: 60px;
+    color: green;
+}
+
+p {
+    font-family: fantasy;
+}

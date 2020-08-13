@@ -1,3 +1,6 @@
+---
+title: First Eleventy Project
+---
 
 <!doctype html>
 <html lang="en">
@@ -5,18 +8,18 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- capture the CSS content as a Nunjucks variable -->
-    
+    {% set css %}
+        {% include "css/custom.css" %}
+    {% endset %}
     <!-- feed it through our cssmin filter to minify -->
     <style>
-        .content{max-width:960px;padding:1em;margin:0 auto;text-align:center}h1{font-size:60px;color:green}p{font-family:fantasy}
+        {{ css | cssmin | safe }}
     </style>
-    <title>First Eleventy Project</title>
+    <title>{{ title }}</title>
   </head>
   <body>
     <div class="content">
-        <h1>First Eleventy Project</h1>
-<p>Does this content work?</p>
-
+        {{ content | safe }}
     </div>
   </body>
 </html>
